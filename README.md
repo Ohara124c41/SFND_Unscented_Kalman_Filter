@@ -3,7 +3,7 @@ Sensor Fusion UKF Highway Project Starter Code
 
 <img src="media/ukf_highway_tracked.gif" width="700" height="400" />
 
-In this project you will implement an Unscented Kalman Filter to estimate the state of multiple cars on a highway using noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
+In this project you will implement an Unscented Kalman Filter to estimate the state of multiple cars on a highway using noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric.
 
 The main program can be built and ran by doing the following from the project top directory.
 
@@ -19,10 +19,10 @@ The program main.cpp has already been filled out, but feel free to modify it.
 
 <img src="media/ukf_highway.png" width="700" height="400" />
 
-`main.cpp` is using `highway.h` to create a straight 3 lane highway environment with 3 traffic cars and the main ego car at the center. 
-The viewer scene is centered around the ego car and the coordinate system is relative to the ego car as well. The ego car is green while the 
+`main.cpp` is using `highway.h` to create a straight 3 lane highway environment with 3 traffic cars and the main ego car at the center.
+The viewer scene is centered around the ego car and the coordinate system is relative to the ego car as well. The ego car is green while the
 other traffic cars are blue. The traffic cars will be accelerating and altering their steering to change lanes. Each of the traffic car's has
-it's own UKF object generated for it, and will update each indidual one during every time step. 
+it's own UKF object generated for it, and will update each indidual one during every time step.
 
 The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. The Z axis is not taken into account for tracking, so you are only tracking along the X/Y axis.
 
@@ -61,6 +61,30 @@ using the following settings:
 
 Please stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as much as possible.
 
+## Tasks
+- [x] FR.0 Compiling and Testing
+- [x] FR.1 Code Efficiency
+- [x] FR.2 Accuracy
+- [x] FR.3 Follows the Correct Algorithm
+
+### FR.0 Compiling and Testing
+The project code must compile without errors using `cmake` and `make`.
+
+### FR.1 Code Efficiency
+The methods in the code should avoid unnecessary calculations.
+
+### FR.2 Accuracy
+
+px, py, vx, vy output coordinates must have an RMSE <= [0.30, 0.16, 0.95, 0.70] after running for longer than 1 second.
+![image](https://github.com/Ohara124c41/SFND_Unscented_Kalman_Filter/blob/master/images/ukf02.PNG?raw=true)
+
+![image](https://github.com/Ohara124c41/SFND_Unscented_Kalman_Filter/blob/master/images/ukf03.PNG?raw=true)
+
+![image](https://github.com/Ohara124c41/SFND_Unscented_Kalman_Filter/blob/master/images/ukf01.PNG?raw=true)
+
+### FR.3 Follows the Correct Algorithm
+Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
+
 ## Generating Additional Data
 
 This is optional!
@@ -71,6 +95,6 @@ and performing clustering. This is similar to what was done in Sensor Fusion Lid
 
 ## Project Instructions and Rubric
 
-This information is only accessible by people who are already enrolled in Sensor Fusion. 
+This information is only accessible by people who are already enrolled in Sensor Fusion.
 If you are enrolled, see the project page in the classroom
 for instructions and the project rubric.
